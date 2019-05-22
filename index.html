@@ -9,88 +9,36 @@
     <link rel="stylesheet" type="text/css" href="assets/css/trivia-game.css">
 </head>
 <body>
-    <div row="col-12-sm">
+    <div row="col-12">
         <header class="stickybanner">
-            <img class="res-img" src="https://cmoa.org/wp-content/uploads/2017/02/Art-History-Banner.jpg">
+            <img class="res-img" src="assets/images/bannerart.png">
         </header>
     </div>
     
-    <div id="gameContainer" row="col-12-sm">
-        <div id="gameContainer" row="col-12-sm">
-            <h1>Test Your Art History Knowledge!</h1>
-            <br>
-            <h3>Try to answer these 10 questions about Art History. There&rsquo;s only one correct answer per question, and you&rsquo;re being timed. Can you complete the quiz in 60 seconds? Good luck!</h3>
-            <br>
+    <div class="gamecontainer" row="col-12">
+        <h1>Test Your Art History Knowledge!</h1>    
+        <br>
+        <h3>Try to answer these 10 questions about Art History. There&rsquo;s only one correct answer per question, and you&rsquo;re being timed. Can you complete the quiz in 60 seconds? Good luck!</h3>
+        <br>
 
-            <hr>
-            <div id="gameContainer" row="col-12-sm">
-                <ol>
-                <li>In the Golden Age of Dutch Painting, still life imagery was:</li>
-                    <input type="radio" name="dutch" value="literal">representation the actual item shown<br>
-                    <input type="radio" name="dutch" value="allegory">religious allergories<br>
-                    <input type="radio" name="dutch" value="commentary">political commentary<br>
-                    <br>
-                <li>Jacob Lawrence is best known for a series of paintings about:</li>
-                    <input type="radio" name="paintings" value="African American">The Great Migration<br>
-                    <input type="radio" name="paintings" value="First Nation Tragedy">The Trail of Tears<br>
-                    <input type="radio" name="paintings" value="Free Thinkers">Portraits of Abolitionists<br>
-                    <br>
-                <li>The Eiffel Tower scandalized Paris when it was built because:</li>
-                    <input type="radio" name="eiffel" value="sexy">it resembled a woman spreading her skirts<br>
-                    <input type="radio" name="eiffel" value="mismatch">it didn't match the city's existing architectural style<br>
-                    <input type="radio" name="eiffel" value="desecration">it was built over a Roman-era burial ground<br>
-                    <br>
-                <li>The &ldquo;Mother of American Modernism&rdquo; is: </li>
-                    <input type="radio" name="modernism" value="society hostess">Gertrude Stein<br>
-                    <input type="radio" name="modernism" value="artist">Georgia O'Keefe<br>
-                    <input type="radio" name="modernism" value="late to the table">Diane Arbus<br>
-                    <br>
-                <li>Sculptures looted from the Acropolis are in which museum:</li>
-                    <input type="radio" name="elgin" value="colonialist jerks">The British Museum, London<br>
-                    <input type="radio" name="elgin" value="still in Greece">The Museum of Cycladic Art, Athens<br>
-                    <input type="radio" name="elgin" value="wrong country">The Hermitage Museum, St. Petersburg<br>
-                    <br>
-                <li>During WWII, contemporary art was confiscated and destroyed, because it was labeled as:</li>
-                    <input type="radio" name="destruction" value="mood">angry<br>
-                    <input type="radio" name="destruction" value="worthless">without monetary value<br>
-                    <input type="radio" name="destruction" value="anti-state">degenerate<br>
-                    <br>
-                <li>The artist, Frieda Kahlo, was married to:</li>
-                    <input type="radio" name=destruction value="lover">Leon Trotsky<br>
-                    <input type="radio" name=destruction value="husband">Diego Rivera<br>
-                    <input type="radio" name=destruction value="anti-revolution">Rufino Tamayo<br>
-                    <br>
-                <li>Most western-European artists found their benefactors in the form of:</li>
-                    <input type="radio" name="buyer" value="thieves">the Church<br>
-                    <input type="radio" name="buyer" value="capitalists">private comissions by wealthy businessmen<br>
-                    <input type="radio" name="buyer" value="lunatics">the monarchy</button>
-                    <br>
-                <li>The first comprehensive photographic documentation of the Dead Sea Scrolls was commissioned on behalf of:</li>
-                    <input type="radio" name="qumran" value="socal scholars">Claremont College<br>
-                    <input type="radio" name="qumran" value="ye olde garde">Oxford University<br>
-                    <input type="radio" name="qumran" value="boston bluebloods">Harvard Divinity School<br>
-                    <br>
-                <li>Printing in Asia is known to have existed as early as:</li>
-                    <input type="radio" name="era" value="early">The Goryeo Dynasty in Korea<br>
-                    <input type="radio" name="era" value="late">The Han Dynasty in China<br>
-                    <input type="radio" name="era" value="way-late">The Edo Period in Japan<br>
-                </ol>
+        <hr>
+        <button onclick="myVar = setTimeout(myFunction, 60000)">START GAME!</button>
+
+        <button onclick="clearTimeout(myVar)">FINISHED!</button>
+            <br>
+            <div class="scorecard"> 
+  
+                <div class="gamecontainer" row="col-6-sm">
+                <div id="questions"></div>
+                <div id="answers"></div>
             </div>
-        </div>
-    </div>
-   
-<!-- results: button as link to different page? -->
-    
-            
-    <div class="scorecard"> 
-        <br>
-        <h3>Your results:<span id="gradeAndMessage"></span></h3>
-        <br>
-        <p>Correct:<span id="correctGuesses"></span></p>
-        <p>Incorrect:<span id="incorrectGuess"></span></p>
-        <p>Unanswered:<span id="incorrectGuess"></span></p>
+            <br>
+        <hr>
     </div>
 
+   
+    <!--will the values below update in real-time?-->            
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="assets/javascript/trivia-game.js"></script>  

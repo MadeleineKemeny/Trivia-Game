@@ -1,0 +1,71 @@
+.col-1-sm {width: 8.33%;}
+.col-2-sm {width: 16.66%;}
+.col-3-sm {width: 25%;}
+.col-4-sm {width: 33.33%;}
+.col-5-sm {width: 41.66%;}
+.col-6-sm {width: 50%;}
+.col-7-sm {width: 58.33%;}
+.col-8-sm {width: 66.66%;}
+.col-9-sm {width: 75%;}
+.col-10-sm {width: 83.33%;}
+.col-11-sm {width: 91.66%;}
+.col-12-sm {width: 100%;}  
+
+body {
+  margin-top:40%;
+}
+
+.stickybanner {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+  
+.res-img {
+  max-width:100%;
+  height:auto;
+}
+
+.gamecontainer {  
+  position: relative;
+  padding: 25px;
+  margin: 25px;
+  border-color: lightseagreen;
+  border-width: 1px;
+  border-style: solid;
+  }
+
+h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 250%;
+  text-align: center;
+  font-weight: bold;
+
+}
+
+h3 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 125%;
+  font-weight: bold;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: 150%;
+}
+
+button {
+  border-radius: 0;
+  border: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: lightseagreen;
+  padding:15px;
+}
+
+#questions #answers {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 150%;
+}

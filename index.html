@@ -14,26 +14,40 @@
             <img class="res-img" src="assets/images/bannerart.png">
         </header>
     </div>
-    
+    <div class="show">
+        <div id="display-answer">The correct answer is:</div>
+        <img id="answerGif" />
+        <button id="proceed">proceed to next question</button>
+    </div>
     <div class="gamecontainer" row="col-12">
+        <br>
         <h1>Test Your Art History Knowledge!</h1>    
+        <br>
         <br>
         <h3>Try to answer these 10 questions about Art History. There&rsquo;s only one correct answer per question, and you&rsquo;re being timed. Can you complete the quiz in 60 seconds? Good luck!</h3>
         <br>
+        <br>
+          
+        <div id="display">
+            <div class="timer-container">
+                <img id="clockimage" src="assets/images/clockimage.png">
+                <div class= "left" id="time">01:00</div>
+                           
+                <button id="start">BEGIN!</button>
+                <button id="stop">STOP!</button>
 
-        <hr>
-        <button onclick="myVar = setTimeout(myFunction, 60000)">START GAME!</button>
-
-        <button onclick="clearTimeout(myVar)">FINISHED!</button>
+            </div>
+            
             <br>
-            <div class="scorecard"> 
   
-                <div class="gamecontainer" row="col-6-sm">
+            <div class="gamecontainer" row="col-6-sm">
                 <div id="questions"></div>
                 <div id="answers"></div>
+                <button id="next">Show Answer</button>
             </div>
-            <br>
-        <hr>
+        </div>
+        <br>
+        
     </div>
 
    

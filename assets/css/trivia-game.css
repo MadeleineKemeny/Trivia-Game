@@ -12,7 +12,7 @@
 .col-12-sm {width: 100%;}  
 
 body {
-  margin-top:40%;
+  margin-top:35%;
 }
 
 .stickybanner {
@@ -20,6 +20,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: -1;
 }
   
 .res-img {
@@ -31,9 +32,11 @@ body {
   position: relative;
   padding: 25px;
   margin: 25px;
+  margin-top: 50px;
   border-color: lightseagreen;
   border-width: 1px;
   border-style: solid;
+  background-color: white;
   }
 
 h1 {
@@ -56,16 +59,74 @@ p {
   line-height: 150%;
 }
 
-button {
+#start, #stop, #next {
   border-radius: 0;
   border: 0;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
   color: white;
   background-color: lightseagreen;
   padding:15px;
+  margin-top: 20px;
+  margin-left: 20px;
+  user-select: none;
+  text-align: center;
+  width: 100px;
+  height: 50px;
+  }
+
+#time {
+  border-radius: 0;
+  border: 1;
+  border-color: lightseagreen;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white; 
+  text-shadow: 0 0 3px black; 
+  font-size: 175%;
+  font-weight: bold;
+  margin-top: 25px;
+  user-select: none;
+  text-align: center;
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  float: left;
+  }
+
+.timer-container {
+  position: relative;
+  margin-left: 25px;
+  margin-right: 100px;
+  text-align: left;
+  color: white;
+  }
+
+#clockimage {
+  z-index: -1;
+  margin-top: 20px;
+  width: 100px;
+  height: 50px;
+  float: left; 
 }
 
-#questions #answers {
+.left {
+  position: absolute;
+  top: 8px;
+  text-align: center;
+}
+#questions {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  line-height: 150%;
+}
+
+#answers {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 150%;
+}
+
+.clock {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 150%;
+  float: right;
 }

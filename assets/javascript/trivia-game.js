@@ -80,7 +80,8 @@ var myquest = [ {
 
 //button displays answer and gif for entertainment value in hidden container "show" behind "gamecontainer"
 function showAnswer(){
-  $("#display-answer").append("<b>"+myquest[indexOfmyquest].correctAnswer)
+  $("#display-answer").empty();
+  $("#display-answer").append("<b>"+myquest[indexOfmyquest].correctAnswer.toUpperCase())
   $("#answerGif").attr("src",myquest[indexOfmyquest].urlImage)
   $(".gamecontainer").hide()
   $(".show").show()

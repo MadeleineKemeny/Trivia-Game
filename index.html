@@ -1,63 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Art History Trivia</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/trivia-game.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Art History Trivia</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/trivia-game.css">
 </head>
 <body>
-    <div row="col-12">
-        <header class="stickybanner">
-            <img class="res-img" src="assets/images/bannerart.png">
-        </header>
+  <div row="col-12">
+    <header class="stickybanner">
+      <img class="res-img" src="assets/images/bannerart.png">
+    </header>
+  </div>
+  <div class="show">
+    <h3 class=display-answer>The correct answer is:</h3>
+    <div id="display-answer"></div>
+    <img id="answerGif" />
+    <button id="proceed">proceed to next question</button>
+  </div>
+  <div class="gamecontainer" row="col-12">
+    <br>
+    <h1>Test Your Art History Knowledge!</h1>  
+    <br>
+    <br>
+    <h3>Try to answer these 10 questions about Art History. There&rsquo;s one correct answer per question, and you have 10 seconds per question. Good luck!</h3>
+    <br>
+    <br>
+     
+    <div id="display">
+      <div class="timer-container">
+        <img id="clockimage" src="assets/images/clockimage.png">
+        <div class= "left" id="time">00:10</div>
+              
+        <button id="start">BEGIN!</button>
+        <button id="stop">STOP!</button>
+      </div>
+      
+      <br>
+ 
+      <div class="gamecontainer" row="col-6-sm">
+        <div id="questions"></div>
+        <div id="answers"></div>
+        <button id="next">I give up!</button>
+      </div>
     </div>
-    <div class="show">
-        <h3 class=display-answer>The correct answer is:</h3>
-        <div id="display-answer"></div>
-        <img id="answerGif" />
-        <button id="proceed">proceed to next question</button>
-    </div>
-    <div class="gamecontainer" row="col-12">
-        <br>
-        <h1>Test Your Art History Knowledge!</h1>    
-        <br>
-        <br>
-        <h3>Try to answer these 10 questions about Art History. There&rsquo;s one correct answer per question, and you have 10 seconds per question. Good luck!</h3>
-        <br>
-        <br>
-          
-        <div id="display">
-            <div class="timer-container">
-                <img id="clockimage" src="assets/images/clockimage.png">
-                <div class= "left" id="time">00:10</div>
-                           
-                <button id="start">BEGIN!</button>
-                <button id="stop">STOP!</button>
-
-            </div>
-            
-            <br>
-  
-            <div class="gamecontainer" row="col-6-sm">
-                <div id="questions"></div>
-                <div id="answers"></div>
-                <button id="next">I give up!</button>
-            </div>
-            <div class="scorecard" row="col-6-sm">
-                    <div id="questions"></div>
-                    <div id="answers"></div>
-                    <div id="unanswered-questions"></div>
-            </div>
-        </div>
-        <br>
-        
-    </div>         
+    <br>
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <script src="assets/javascript/trivia-game.js"></script>  
+  </div> 
+  <div class="scorecard" row="col-6-sm">
+    <div id="results"></div>
+    <button onclick="location.reload()" id="rerun">Play Again?</button>
+  </div>    
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="assets/javascript/trivia-game.js"></script> 
 </body>
 </html>

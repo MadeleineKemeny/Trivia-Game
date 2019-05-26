@@ -5,6 +5,7 @@ var indexOfmyquest = 0;
 var possibleAnswers;
 var correctAnswers = 0;
 var incorrectGuesses = 0;
+var skipped = 0;
 
 
 //when game is opened, these buttons are made active
@@ -14,6 +15,7 @@ window.onload = function () {
   $("#start").on("click", start);
   $("#next").on("click", showAnswer).hide();
   $("#proceed").on("click", returnToGame);
+  $(".scorecard").hide()
 };
 
 //questions display one at a time; "click" indicates answer and moves to "function showAnswer" /
@@ -135,7 +137,7 @@ function showquestions () {
         console.log("i: ", (myquest[ indexOfmyquest ].correctAnswer), (parseInt(res)))
         incorrectGuesses++
       }
-
+      //need to define what to do if timer runs out without radio button being clicked--> "var skipped"
       //loading successive questions to be displayed at each click event
       indexOfmyquest++
       showquestions()
@@ -153,6 +155,8 @@ function showresults () {
   $("#answers").empty()
 
   //html on the fly: statement to declare results
+  $(".gamecontainer").hide()
+  $(".scorecard").show()
   $("#questions").append("<h3>Your results:</h3>")
 
   var unanswered = myquest.length - correctAnswers - incorrectGuesses
@@ -160,9 +164,6 @@ function showresults () {
   $("#questions").append("<p>Correct: <span>" + correctAnswers + "</span></p>")
   $("#questions").append("<p>Incorrect: <span>" + incorrectGuesses + "</span></p>")
   $("#questions").append("<p>Unanswered: <span>" + unanswered + "</span></p>")
-  $("#next").on("click", showAnswer).hide();
-  
-
 }
 //timer thingies
 function count () {

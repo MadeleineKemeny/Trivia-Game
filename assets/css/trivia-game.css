@@ -179,3 +179,14 @@ p {
   width: 50%;
   height: 50px;
 }
+
+.scorecard {  
+  position: relative;
+  padding: 25px;
+  margin: 25px;
+  margin-top: 50px;
+  border-color: lightseagreen;
+  border-width: 1px;
+  border-style: solid;
+  background-color: white;
+  }

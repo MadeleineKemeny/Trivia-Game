@@ -23,61 +23,71 @@ var myquest = [{
   question: "1. In the Golden Age of Dutch Painting, still life imagery was:",
   answer: ["representation the actual item shown", "religious allegories", "political commentary"],
   correctAnswer: "religious allegories",
-  urlImage: "https://media.giphy.com/media/Kxqyq5Q486NVu/giphy.gif"
+  urlImage: "https://media.giphy.com/media/Kxqyq5Q486NVu/giphy.gif",
+  buttonText: "Proceed to next question",
 },
 {
   question: "2. Jacob Lawrence is best known for a series of paintings about:",
   answer: ["The Great Migration", "The Trail of Tears", "Portraits of Abolitionists"],
   correctAnswer: "The Great Migration",
-  urlImage: "https://media.giphy.com/media/l4FB5dgbc21nQPKhy/giphy.gif"
+  urlImage: "https://media.giphy.com/media/l4FB5dgbc21nQPKhy/giphy.gif",
+  buttonText: "Proceed to next question",
 },
 {
   question: "3. The Eiffel Tower scandalized Paris when it was built because:",
   answer: ["it resembled a woman spreading her skirts", "it didn't match the city's existing architectural style", "it was built over a Roman-era burial ground"],
   correctAnswer: "it resembled a woman spreading her skirts",
-  urlImage: "https://media.giphy.com/media/4cdJGWnSOBqYo/giphy.gif"
+  urlImage: "https://media.giphy.com/media/4cdJGWnSOBqYo/giphy.gif",
+  buttonText: "Proceed to next question",
 },
 {
   question: "4. The &ldquo;Mother of American Modernism&rdquo; is:",
-  answer: ["Gertrude Stein", "Georgia O'Keeffe", "Diane Arbus"],
-  correctAnswer: "Georgia O'Keeffe",
-  urlImage: "https://media.giphy.com/media/3ornjHBJr0NzgqmFSo/giphy.gif"
+  answer: ["Gertrude Stein", "Georgia O’Keeffe", "Diane Arbus"],
+  correctAnswer: "Georgia O’Keeffe",
+  urlImage: "https://media.giphy.com/media/3ornjHBJr0NzgqmFSo/giphy.gif",
+  buttonText: "Proceed to next question",
 },
 {
   question: "5. Sculptures looted from the Acropolis are in which museum:",
   answer: ["The British Museum, London", "The Museum of Cycladic Art, Athens", "The Hermitage Museum, St. Petersburg"],
   correctAnswer: "The British Museum, London",
-  urlImage: "https://media.giphy.com/media/U8DnMoBzvHSt1AxSkV/giphy.gif"
+  urlImage: "https://media.giphy.com/media/U8DnMoBzvHSt1AxSkV/giphy.gif",
+  buttonText: "Proceed to next question",
 },
 {
   question: "6. During WWII, contemporary art was confiscated and destroyed, because it was classified as:",
   answer: ["angry", "without monetary value", "degenerate"],
   correctAnswer: "degenerate",
-  urlImage: "https://media.giphy.com/media/24FMod5txpeBynO2eS/giphy.gif"
+  urlImage: "https://media.giphy.com/media/24FMod5txpeBynO2eS/giphy.gif",
+  buttonText: "Proceed to next question",
 },
 {
   question: "7. The artist, Frieda Kahlo, was married to:",
   answer: ["Leon Trotsky", "Diego Rivera", "Rufino Tamayo"],
   correctAnswer: "Diego Rivera",
-  urlImage: "https://media.giphy.com/media/Wxlx4kVDZ7IZsLBhDH/giphy.gif"
+  urlImage: "https://media.giphy.com/media/Wxlx4kVDZ7IZsLBhDH/giphy.gif", 
+  buttonText: "Proceed to next question",
 },
 {
   question: "8. Most western-European artists found their benefactors in the form of:",
   answer: ["the Catholic Church", "private comissions by wealthy businessmen", "the monarchy"],
   correctAnswer: "the monarchy",
-  urlImage: "https://media.giphy.com/media/Bgxm9NBY96h0s/giphy.gif"
+  urlImage: "https://media.giphy.com/media/Bgxm9NBY96h0s/giphy.gif",
+  buttonText: "Proceed to next question",
 },
 {
   question: "9. The first comprehensive photographic documentation of the Dead Sea Scrolls was commissioned on behalf of:",
   answer: ["Claremont College", "Oxford University", "Harvard Divinity School"],
   correctAnswer: "Claremont College",
-  urlImage: "https://media.giphy.com/media/ieNgLZAiId0uA/giphy.gif"
+  urlImage: "https://media.giphy.com/media/ieNgLZAiId0uA/giphy.gif",
+  buttonText: "Proceed to next question",
 },
 {
   question: "10. Printing in Asia is known to have existed as early as:",
   answer: ["The Goryeo Dynasty in Korea", "The Han Dynasty in China", "The Edo Period in Japan"],
   correctAnswer: "The Han Dynasty in China",
-  urlImage: "https://media.giphy.com/media/rHR8qP1mC5V3G/giphy.gif"
+  urlImage: "https://media.giphy.com/media/rHR8qP1mC5V3G/giphy.gif",
+  buttonText: "Show my results",
 }];
 
 //button displays answer and gif for entertainment value in hidden container "show" behind "gamecontainer"
@@ -87,6 +97,8 @@ function showAnswer() {
   $("#answerGif").attr("src", myquest[indexOfmyquest].urlImage)
   $(".gamecontainer").hide()
   $(".show").show()
+  $("#proceed").html(myquest[indexOfmyquest].buttonText);
+
 }
 
 //after displaying correct answer and gif, hide container and return to "game container"
@@ -129,6 +141,11 @@ function showquestions() {
     //instructions for radio button clicks
     $(".response").on("click", function () {
       var res = $(this).attr("data-answer")
+
+      console.log(res);
+      console.log(myquest[indexOfmyquest].correctAnswer.toLowerCase());
+      
+      
       showAnswer()
       $("#next").on("click", showAnswer).show();
       

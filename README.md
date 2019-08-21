@@ -5,10 +5,17 @@ I started with the class exercise of creating a functioning timer and reverse en
 There is one problem with scoring I have yet to figure out: it doesn't want to register the Georgia O'Keeffe answer as correct, but I'll chalk that up to snobbery. 
 
 
-##**UPDATE**
+## **UPDATE**
 
 I figured it out by using keystrokes to simulate an apostrophe; it was reading it as the end of the string per TA Dave Shilander's suggestion of the problem. Also, I updated the "proceed" button that follows gifs to "show score" at last question by adding it as an element of the array of objects.
 
 
-##Appreciation
-Isabel Arcones helped me translate much of my pseudo code into working Jquery. Phil Loy worked very hard on getting the mathematic funtion to behave. There was some kind of wonky incrementing going on which is why we added the line that the score counldn't exceed the lenght of the array index. And grateful to the universe for https://www.lifewire.com/typing-quotes-apostrophes-and-primes-1074104
+## Tech Details
+
+HTML, CSS, Javascript, and JQuery
+
+
+
+## Appreciation
+
+Isabel Arcones helped me translate much of my pseudo code into working Jquery. Phil Loy worked very hard on getting the mathematic funtion to behave. There was some kind of wonky incrementing going on which is why we added the line that the score couldn't exceed the length of the array index. W3 Schools helped with that sticky banner. Thank you to all of the folks with enough time on their hands to create the gifs that make it silly. And grateful to the universe for https://www.lifewire.com/typing-quotes-apostrophes-and-primes-1074104
